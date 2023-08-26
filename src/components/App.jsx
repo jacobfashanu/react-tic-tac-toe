@@ -34,6 +34,15 @@ function App() {
   }
 
   if(isGameTie || isXWin || isOWin) {
+    if(isGameTie) {
+      alert('tie');
+    }
+    else if(isXWin) {
+      alert('X won');
+    }
+    else {
+      alert('O won');
+    }
     reset();
   }
 
@@ -42,17 +51,17 @@ function App() {
     (tile3 === 'x' && tile6 === 'x') ||
     (tile1 === 'x' && tile2 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile4 === 'o' && tile8 === 'o') || 
     (tile3 === 'o' && tile6 === 'o') ||
     (tile1 === 'o' && tile2 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     } 
     if (tile1 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -60,16 +69,16 @@ function App() {
     if (((tile0 === 'x' && tile2 === 'x') || 
     (tile4 === 'x' && tile7 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+      
     } 
     if (((tile0 === 'o' && tile2 === 'o') || 
     (tile4 === 'o' && tile7 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }
     if (tile0 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -78,33 +87,33 @@ function App() {
     (tile4 === 'x' && tile6 === 'x') || 
     (tile5 === 'x' && tile8 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile0 === 'o' && tile1 === 'o') || 
     (tile4 === 'o' && tile6 === 'o') || 
     (tile5 === 'o' && tile8 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }
     if (tile1 !== '' && tile0 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
   function isGameOverTile3() {
     if (((tile0 === 'x' && tile6 === 'x') || 
     (tile4 === 'x' && tile5 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile0 === 'o' && tile6 === 'o') || 
     (tile4 === 'o' && tile5 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     } 
     if (tile1 !== '' && tile2 !== '' && tile0 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -114,18 +123,18 @@ function App() {
     (tile6 === 'x' && tile2 === 'x') || 
     (tile0 === 'x' && tile8 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile1 === 'o' && tile7 === 'o') || 
     (tile3 === 'o' && tile5 === 'o') ||
     (tile6 === 'o' && tile2 === 'o') || 
     (tile0 === 'o' && tile8 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }  
     if (tile1 !== '' && tile2 !== '' && tile3 !== '' && tile0 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -133,16 +142,16 @@ function App() {
     if (((tile2 === 'x' && tile8 === 'x') || 
     (tile3 === 'x' && tile4 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile2 === 'o' && tile8 === 'o') || 
     (tile3 === 'o' && tile4 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }  
     if (tile1 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile0 !== '' && tile6 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -151,17 +160,17 @@ function App() {
     (tile7 === 'x' && tile8 === 'x') ||
     (tile2 === 'x' && tile4 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile0 === 'o' && tile3 === 'o') || 
     (tile7 === 'o' && tile8 === 'o') ||
     (tile2 === 'o' && tile4 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }  
     if (tile0 !== '' && tile1 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile7 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -169,16 +178,16 @@ function App() {
     if (((tile1 === 'x' && tile4 === 'x') || 
     (tile6 === 'x' && tile8 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile2 === 'o' && tile5 === 'o') || 
     (tile6 === 'o' && tile8 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }  
     if (tile1 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile0 !== '' && tile8 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
@@ -187,17 +196,17 @@ function App() {
     (tile6 === 'x' && tile7 === 'x') ||
     (tile0 === 'x' && tile4 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+       
     } 
     if (((tile2 === 'o' && tile5 === 'o') || 
     (tile6 === 'o' && tile7 === 'o') ||
     (tile0 === 'o' && tile4 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
-      alert('O won');
+       
     }   
     if (tile1 !== '' && tile2 !== '' && tile3 !== '' && tile4 !== '' && tile5 !== '' && tile6 !== '' && tile7 !== '' && tile0 !== '') {
       setIsGameTie(true);
-      alert('tie')
+       
     }
   }
 
