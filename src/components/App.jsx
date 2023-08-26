@@ -42,7 +42,7 @@ function App() {
     (tile3 === 'x' && tile6 === 'x') ||
     (tile1 === 'x' && tile2 === 'x')) && xPlayerToMove) {
       setIsXWin(true);
-      alert('X won');
+      alert('X is the winner');
     } 
     if (((tile4 === 'o' && tile8 === 'o') || 
     (tile3 === 'o' && tile6 === 'o') ||
