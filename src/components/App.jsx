@@ -17,6 +17,25 @@ function App() {
   const[tile7, setTile7] = useState('');
   const[tile8, setTile8] = useState('');
 
+  let isGameOver = false;
+  if(isGameTie || isXWin || isOWin ) {
+    isGameOver = true;
+  }
+
+  let h1text = xPlayerToMove? 'Player X to move' : 'Player O to move';
+
+  if(isGameTie) {
+    h1text = 'Tie';
+  }
+
+  if(isXWin) {
+    h1text = 'X won';
+  }
+
+  if(isOWin) {
+    h1text = 'O won';
+  }
+
   function reset() {
     setIsGameTie(false);
     setIsXWin(false);
@@ -34,16 +53,16 @@ function App() {
   }
 
   if(isGameTie || isXWin || isOWin) {
-    if(isGameTie) {
-      alert('tie');
-    }
-    else if(isXWin) {
-      alert('X won');
-    }
-    else {
-      alert('O won');
-    }
-    reset();
+    // if(isGameTie) {
+    //   alert('tie');
+    // }
+    // else if(isXWin) {
+    //   alert('X won');
+    // }
+    // else {
+    //   alert('O won');
+    // }
+    // reset();
   }
 
   function isGameOverTile0() {
@@ -212,9 +231,9 @@ function App() {
 
   return (
     <>
-      <h1>Player {xPlayerToMove && 'X'} {!xPlayerToMove && 'O'} to move</h1>
+      <h1>{h1text}</h1>
       <div id='tic-tac-container'>
-        <Tile tile={tile0} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile0} update={() => {
           
           if (xPlayerToMove) {
             setTile0('x');
@@ -225,7 +244,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile0();
         }}></Tile>
-        <Tile tile={tile1} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile1} update={() => {
           if (xPlayerToMove) {
             setTile1('x');
           }
@@ -235,7 +254,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile1();
         }}></Tile>
-        <Tile tile={tile2} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile2} update={() => {
           if (xPlayerToMove) {
             setTile2('x');
           }
@@ -245,7 +264,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile2();
         }}></Tile>
-        <Tile tile={tile3} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile3} update={() => {
           if (xPlayerToMove) {
             setTile3('x');
           }
@@ -255,7 +274,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile3();
         }}></Tile>
-        <Tile tile={tile4} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile4} update={() => {
           if (xPlayerToMove) {
             setTile4('x');
           }
@@ -265,7 +284,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile4();
         }}></Tile>
-        <Tile tile={tile5} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile5} update={() => {
           if (xPlayerToMove) {
             setTile5('x');
           }
@@ -275,7 +294,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile5();
         }}></Tile>
-        <Tile tile={tile6} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile6} update={() => {
           if (xPlayerToMove) {
             setTile6('x');
           }
@@ -285,7 +304,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile6();
         }}></Tile>
-        <Tile tile={tile7} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile7} update={() => {
           if (xPlayerToMove) {
             setTile7('x');
           }
@@ -295,7 +314,7 @@ function App() {
           setPlayerToMove(!xPlayerToMove);
           isGameOverTile7();
         }}></Tile>
-        <Tile tile={tile8} update={() => {
+        <Tile isGameOver={isGameOver} tile={tile8} update={() => {
           if (xPlayerToMove) {
             setTile8('x');
           }
@@ -306,6 +325,7 @@ function App() {
           isGameOverTile8();
         }}></Tile>
       </div>
+      {isGameOver && <button onClick={reset}>Click here to restart</button>}
     </>
   )
 }

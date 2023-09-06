@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 
 
 
-function Tile({ tile, update }) {    
+function Tile({ isGameOver, tile, update }) {    
 
     function onClicker () {
-        if(tile != '') return;
+        if(tile != '' || isGameOver) return;
         update();
     }
 
@@ -18,6 +18,7 @@ Tile.propTypes = {
     // tile: PropTypes.bool,
     tile: PropTypes.string,
     update: PropTypes.func,
+    isGameOver: PropTypes.bool
     // currentPlayer: PropTypes.bool,
     
 }
