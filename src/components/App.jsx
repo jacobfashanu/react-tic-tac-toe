@@ -21,7 +21,7 @@ function App() {
     setIsGameTie(false);
     setIsXWin(false);
     setIsOWin(false);
-    setPlayerToMove(true);
+    setPlayerToMove(true); //Add the next button to the side of the 
     setTile0('');
     setTile1('');
     setTile2('');
@@ -180,7 +180,7 @@ function App() {
       setIsXWin(true);
        
     } 
-    if (((tile2 === 'o' && tile5 === 'o') || 
+    if (((tile1 === 'o' && tile4 === 'o') || 
     (tile6 === 'o' && tile8 === 'o')) && !xPlayerToMove) {
       setIsOWin(true);
        
