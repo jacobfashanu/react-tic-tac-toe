@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  transform: scale(1.5);
   /* background-color: red;
   color: yellow; */
 }
@@ -20,16 +21,26 @@ body {
 #tic-tac-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 400px;
-  height: 400px;
+  /* width: 400px; */
+  /* height: 400px; */
+  max-height: 300px;
+  font-size: 5rem;
   /* margin: auto; */
 }
 
 .tiles{
   border: solid;
   text-align: center;
-  padding: 50px;
+  width: 100px;
+  height: 100px;
+  /* padding: 50px; */
   /* margin: auto; */
+}
+
+#restart{
+  /* background-color: red; */
+  position: absolute;
+  margin-top: 10px;
 }
 
 .tiles:nth-child(1) {

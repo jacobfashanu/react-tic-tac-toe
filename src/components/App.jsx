@@ -325,7 +325,7 @@ function App() {
           isGameOverTile8();
         }}></Tile>
       </div>
-      {isGameOver && <button onClick={reset}>Click here to restart</button>}
+      {isGameOver && <button id='restart' onClick={reset}>Click here to restart</button>}
     </>
   )
 }
