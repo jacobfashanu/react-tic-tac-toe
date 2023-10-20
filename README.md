@@ -10,6 +10,7 @@ Live Site URL: [https://jacobf-tic-tac-toe.netlify.app/](https://jacobf-tic-tac-
 - HTML
 - CSS
 - JS
+- Reactjs
 
 ### Author
 
